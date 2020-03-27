@@ -1,0 +1,42 @@
+boucle de d'entrainement des rn:
+    on charge carte
+    on cree une generation de base
+    on run train 
+        run a chaque gen passe update l'historique du rn en question
+
+    on save la derniere gen en cours
+
+_________________________________________________________
+
+
+on se base sur une meme carte, sur une meme gen de base
+    pour chaque mth utilisee, on donne un nom different aux rn , histoire de les differencier
+    donc avant de lancer l'entrainement, on cree le dossier de sauvegarde
+
+_________________________________________________________
+
+l'historique d'entrainement d'un rn se voit comme ceci:
+[
+    [ {} taillegen dicos qui sont les histos de chaque indiv, tries en decroissance du score]
+    [....]
+    [....]
+    ....
+    nb de gen tableaux
+    ....
+
+]   1 tableau par "rn"
+
+
+
+on cree nbmth * nbthread copies de la carte et du point de depart/ arrivee
+dico de mth:
+    pour chaque mth, 
+        pour chaque gen:
+            on divise la population en plusieurs listes
+            chaque liste est traitee par un thread
+            on concatene les listes au pif
+            on trie la popoulation
+            on update l'historique
+            pour chaque thread, on a besoin d'une carte et d'un point d'arrivee
+
+dico de mutation

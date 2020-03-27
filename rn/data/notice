@@ -1,0 +1,28 @@
+essais:
+
+
+
+limite de distance, et minimum
+
+les differentes mth de mutation, eps=0.1
+140
+141
+142
+143
+144  
+
+
+
+
+series 200 : mutation_mth_3
+series 210 : mutation_mth 4         ( evolution normale)
+series 220 : mutation_mth 5
+
+0 update score move1
+1   update score move2
+2   update score move1 bonus malus
+3   update update score move2 bonus malus
+4
+5
+6
+
